@@ -4,6 +4,7 @@ from users.models import User
 
 
 class RegisterSerializer(serializers.ModelSerializer):
+    '''Serializer for user registration information.'''
 
     # Make sure the password cannot be retrieved from the API
     password = serializers.CharField(write_only=True)
@@ -36,3 +37,22 @@ class RegisterSerializer(serializers.ModelSerializer):
         )
 
         return user
+
+
+class MeSerializer(serializers.ModelSerializer):
+    '''
+    Serializer for authenticated user information.
+    Only consent-related data are editable.
+    '''
+
+    date_joined = serializers.DateTimeField(read_only=True)
+    username = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = User
+        fields = [
+            'username',
+            'can_be_contacted',
+            'can_data_be_shared',
+            'date_joined'
+        ]
