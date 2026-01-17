@@ -1,3 +1,4 @@
+from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 
 from users.models import User
@@ -56,3 +57,31 @@ class MeSerializer(serializers.ModelSerializer):
             'can_data_be_shared',
             'date_joined'
         ]
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+
+    old_password = serializers.CharField(write_only=True)
+    new_password = serializers.CharField(write_only=True)
+    new_password_confirm = serializers.CharField(write_only=True)
+
+    def validate(self, attrs):
+        '''Verify old and new password.'''
+
+        # Retrieve connected user from request
+        user = self.context['request'].user
+
+        # Check old password
+        if not user.check_password(attrs['old_password']):
+            raise serializers.ValidationError('Ancien mot de passe incorrect.')
+        
+        # Check that the new password inputs match
+        if attrs['new_password'] != attrs['new_password_confirm']:
+            raise serializers.ValidationError(
+                'Les nouveaux mot de passes ne sont pas identiques.'
+            )
+        
+        # Apply Django password validators (length, complexity...)
+        validate_password(attrs['new_password'], user=user)
+
+        return attrs
