@@ -20,12 +20,13 @@ from rest_framework import routers
 
 from users.views import RegisterView, MeView, ChangePasswordView
 from projects.views import ProjectViewset
-from tracking.views import IssueViewSet
+from tracking.views import IssueViewSet, CommentViewSet
 
 
 router = routers.SimpleRouter()
 router.register('projects', ProjectViewset, basename='projects')
 router.register('issues', IssueViewSet, basename='issues')
+router.register('comments', CommentViewSet, basename='comments')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
