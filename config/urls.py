@@ -24,8 +24,8 @@ from tracking.views import IssueViewSet
 
 
 router = routers.SimpleRouter()
-router.register('project', ProjectViewset, basename='project')
-router.register('issue', IssueViewSet, basename='issue')
+router.register('projects', ProjectViewset, basename='projects')
+router.register('issues', IssueViewSet, basename='issues')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

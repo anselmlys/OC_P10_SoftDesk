@@ -6,7 +6,6 @@ from projects.serializers import ProjectSerializer
 
 class ProjectViewset(ModelViewSet):
 
-    queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
     def perform_create(self, serializer):
@@ -16,3 +15,7 @@ class ProjectViewset(ModelViewSet):
         '''
         project = serializer.save(author=self.request.user)
         Contributor.objects.create(user=self.request.user, project=project)
+
+    def get_queryset(self):
+        user = self.request.user
+        return Project.objects.filter(contributors__user=user).distinct()
