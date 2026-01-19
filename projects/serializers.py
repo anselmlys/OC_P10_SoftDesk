@@ -13,7 +13,6 @@ class ProjectListSerializer(serializers.ModelSerializer):
 class ProjectDetailSerializer(serializers.ModelSerializer):
     author_username = serializers.CharField(source='author.username', read_only=True)
     contributors_usernames = serializers.SerializerMethodField()
-    issues = IssueListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Project
@@ -29,7 +28,7 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
             'contributors_usernames',
             'issues',
         ]
-        read_only_fields = ['id', 'author', 'created_time', 'updated_at']
+        read_only_fields = ['id', 'author', 'created_time', 'updated_at', 'issues']
 
     def get_contributors_usernames(self, obj):
         return [c.user.username for c in obj.contributors.all()]

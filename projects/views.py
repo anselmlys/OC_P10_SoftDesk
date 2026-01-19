@@ -22,6 +22,6 @@ class ProjectViewset(ModelViewSet):
         return Project.objects.filter(contributors__user=user).distinct()
     
     def get_serializer_class(self):
-        if self.action == 'retrieve':
-            return self.detail_serializer_class
-        return super().get_serializer_class()
+        if self.action == 'list':
+            return super().get_serializer_class()
+        return self.detail_serializer_class

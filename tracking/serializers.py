@@ -8,6 +8,7 @@ class IssueListSerializer(serializers.ModelSerializer):
         model = Issue
         fields = [
             'id',
+            'project',
             'name',
             'tag',
             'priority',
