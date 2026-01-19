@@ -4,6 +4,7 @@ from projects.models import Project
 
 
 class ProjectSerializer(serializers.ModelSerializer):
+    author_username = serializers.CharField(source='author.username', read_only=True)
 
     class Meta:
         model = Project
@@ -13,6 +14,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             'description',
             'type',
             'author',
+            'author_username',
             'created_time',
             'updated_at',
         ]
