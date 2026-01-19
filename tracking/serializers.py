@@ -3,7 +3,20 @@ from rest_framework import serializers
 from tracking.models import Issue
 
 
-class IssueSerializer(serializers.ModelSerializer):
+class IssueListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Issue
+        fields = [
+            'id',
+            'name',
+            'tag',
+            'priority',
+            'created_time',
+            'updated_at'
+        ]
+
+
+class IssueDetailSerializer(serializers.ModelSerializer):
     project_name = serializers.CharField(source='project.name', read_only=True)
     author_username = serializers.CharField(source='author.username', read_only=True)
     assigned_to_username = serializers.CharField(source='assigned_to.username', read_only=True)
