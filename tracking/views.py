@@ -6,6 +6,13 @@ from tracking.models import Issue, Comment
 from common.mixins import MultipleSerializerMixin
 
 
+class AdminIssueViewSet(MultipleSerializerMixin, ModelViewSet):
+
+    serializer_class = IssueListSerializer
+    detail_serializer_class = IssueDetailSerializer
+    queryset = Issue.objects.all()
+
+
 class IssueViewSet(MultipleSerializerMixin, ModelViewSet):
 
     serializer_class = IssueListSerializer
@@ -18,6 +25,13 @@ class IssueViewSet(MultipleSerializerMixin, ModelViewSet):
     def get_queryset(self):
         user = self.request.user
         return Issue.objects.filter(project__contributors__user=user).distinct()
+
+
+class AdminCommentViewSet(MultipleSerializerMixin, ModelViewSet):
+
+    serializer_class = CommentListSerializer
+    detail_serializer_class = CommentDetailSerializer
+    queryset = Comment.objects.all()
 
 
 class CommentViewSet(MultipleSerializerMixin, ModelViewSet):

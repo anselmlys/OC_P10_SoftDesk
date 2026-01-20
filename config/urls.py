@@ -18,16 +18,25 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from users.views import RegisterView, MeView, ChangePasswordView
-from projects.views import ProjectViewset, ContributorViewSet
-from tracking.views import IssueViewSet, CommentViewSet
+from users.views import RegisterView, MeView, ChangePasswordView, AdminUserViewSet
+from projects.views import (ProjectViewset, AdminProjectViewset,
+                            ContributorViewSet, AdminContributorViewSet)
+from tracking.views import (IssueViewSet, AdminIssueViewSet,
+                            CommentViewSet, AdminCommentViewSet)
 
 
 router = routers.SimpleRouter()
+
 router.register('contributors', ContributorViewSet, basename='contributors')
 router.register('projects', ProjectViewset, basename='projects')
 router.register('issues', IssueViewSet, basename='issues')
 router.register('comments', CommentViewSet, basename='comments')
+
+router.register('admin/users', AdminUserViewSet, basename='admin-users')
+router.register('admin/contributors', AdminContributorViewSet, basename='admin-contributors')
+router.register('admin/projects', AdminProjectViewset, basename='admin-projects')
+router.register('admin/issues', AdminIssueViewSet, basename='admin-issues')
+router.register('admin/comments', AdminCommentViewSet, basename='admin-comments')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

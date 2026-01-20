@@ -2,8 +2,15 @@ from rest_framework.viewsets import ModelViewSet
 
 from projects.models import Project, Contributor
 from projects.serializers import (ProjectDetailSerializer, ProjectListSerializer,
-                                  ContributorSerializer)
+                                  AdminProjectDetailSerializer, ContributorSerializer)
 from common.mixins import MultipleSerializerMixin
+
+
+class AdminProjectViewset(MultipleSerializerMixin, ModelViewSet):
+    
+    serializer_class = ProjectListSerializer
+    detail_serializer_class = AdminProjectDetailSerializer
+    queryset = Project.objects.all()
 
 
 class ProjectViewset(MultipleSerializerMixin, ModelViewSet):
@@ -24,10 +31,15 @@ class ProjectViewset(MultipleSerializerMixin, ModelViewSet):
         return Project.objects.filter(contributors__user=user).distinct()
 
 
-class ContributorViewSet(ModelViewSet):
+class AdminContributorViewSet(ModelViewSet):
 
     serializer_class = ContributorSerializer
     queryset = Contributor.objects.all()
+
+
+class ContributorViewSet(ModelViewSet):
+
+    serializer_class = ContributorSerializer
 
     def get_queryset(self):
         user = self.request.user

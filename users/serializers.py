@@ -1,7 +1,9 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 
-from users.models import User
+
+User = get_user_model()
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -57,6 +59,19 @@ class MeSerializer(serializers.ModelSerializer):
             'can_data_be_shared',
             'date_joined'
         ]
+
+class AdminUserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = [
+            'id',
+            'username',
+            'can_be_contacted',
+            'can_data_be_shared',
+            'date_joined'
+        ]
+        read_only_fields = fields
 
 
 class ChangePasswordSerializer(serializers.Serializer):

@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from rest_framework import generics
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import update_session_auth_hash, get_user_model
 
-from users.serializers import RegisterSerializer, MeSerializer, ChangePasswordSerializer
+from users.serializers import (RegisterSerializer, MeSerializer,
+                               ChangePasswordSerializer, AdminUserSerializer)
+
+
+User = get_user_model()
 
 
 class RegisterView(generics.CreateAPIView):
@@ -26,6 +31,12 @@ class MeView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+class AdminUserViewSet(ModelViewSet):
+
+    serializer_class = AdminUserSerializer
+    queryset = User.objects.all()
 
 
 class ChangePasswordView(APIView):
