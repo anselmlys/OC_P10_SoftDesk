@@ -1,7 +1,6 @@
 from rest_framework import serializers
 
-from projects.models import Project
-from tracking.serializers import IssueListSerializer
+from projects.models import Project, Contributor
 
 
 class ProjectListSerializer(serializers.ModelSerializer):
@@ -32,3 +31,18 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
 
     def get_contributors_usernames(self, obj):
         return [c.user.username for c in obj.contributors.all()]
+
+
+class ContributorSerializer(serializers.ModelSerializer):
+    user_username = serializers.CharField(source='user.username', read_only=True)
+    project_name = serializers.CharField(source='project.name', read_only=True)
+
+    class Meta:
+        model = Contributor
+        fields = [
+            'id',
+            'user',
+            'user_username',
+            'project',
+            'project_name'
+        ]
