@@ -4,8 +4,9 @@ from rest_framework.permissions import IsAuthenticated
 from projects.models import Project, Contributor
 from projects.serializers import (ProjectDetailSerializer, ProjectListSerializer,
                                   AdminProjectDetailSerializer, ContributorSerializer)
-from common.mixins import MultipleSerializerMixin
-from common.permissions import IsAdminAuthenticated
+from common.mixins import MultipleSerializerMixin, ResourcePermissionMixin
+from common.permissions import (IsAdminAuthenticated, IsProjectContributor,
+                                IsAuthor)
 
 
 class AdminProjectViewset(MultipleSerializerMixin, ModelViewSet):
@@ -16,11 +17,10 @@ class AdminProjectViewset(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class ProjectViewset(MultipleSerializerMixin, ModelViewSet):
+class ProjectViewset(MultipleSerializerMixin, ResourcePermissionMixin, ModelViewSet):
 
     serializer_class = ProjectListSerializer
     detail_serializer_class = ProjectDetailSerializer
-    permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
         '''
@@ -45,7 +45,7 @@ class AdminContributorViewSet(ModelViewSet):
 class ContributorViewSet(ModelViewSet):
 
     serializer_class = ContributorSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsProjectContributor]
 
     def get_queryset(self):
         user = self.request.user

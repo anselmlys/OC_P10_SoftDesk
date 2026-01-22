@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from tracking.serializers import (IssueListSerializer, IssueDetailSerializer,
                                   CommentListSerializer, CommentDetailSerializer)
 from tracking.models import Issue, Comment
-from common.mixins import MultipleSerializerMixin
+from common.mixins import MultipleSerializerMixin, ResourcePermissionMixin
 from common.permissions import IsAdminAuthenticated
 
 
@@ -16,11 +16,10 @@ class AdminIssueViewSet(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class IssueViewSet(MultipleSerializerMixin, ModelViewSet):
+class IssueViewSet(MultipleSerializerMixin, ResourcePermissionMixin, ModelViewSet):
 
     serializer_class = IssueListSerializer
     detail_serializer_class = IssueDetailSerializer
-    permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
         '''During POST, make the authenticated user the author of the project.'''
@@ -39,11 +38,10 @@ class AdminCommentViewSet(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class CommentViewSet(MultipleSerializerMixin, ModelViewSet):
+class CommentViewSet(MultipleSerializerMixin, ResourcePermissionMixin, ModelViewSet):
 
     serializer_class = CommentListSerializer
     detail_serializer_class = CommentDetailSerializer
-    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
