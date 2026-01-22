@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from projects.models import Project, Contributor
 from projects.serializers import (ProjectDetailSerializer, ProjectListSerializer,
                                   AdminProjectDetailSerializer, ContributorSerializer)
-from common.mixins import MultipleSerializerMixin, ResourcePermissionMixin
+from common.mixins import MultipleSerializerMixin
 from common.permissions import (IsAdminAuthenticated, IsProjectContributor,
                                 IsAuthor)
 
@@ -17,7 +17,7 @@ class AdminProjectViewset(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class ProjectViewset(MultipleSerializerMixin, ResourcePermissionMixin, ModelViewSet):
+class ProjectViewset(MultipleSerializerMixin, ModelViewSet):
 
     serializer_class = ProjectListSerializer
     detail_serializer_class = ProjectDetailSerializer
@@ -33,6 +33,27 @@ class ProjectViewset(MultipleSerializerMixin, ResourcePermissionMixin, ModelView
     def get_queryset(self):
         user = self.request.user
         return Project.objects.filter(contributors__user=user).distinct()
+    
+    def get_permissions(self):
+        '''
+        Permission is based on action:
+        - list/retrieve: project contributor
+        - create: authenticated
+        - update/partial_update/destroy: project author
+        '''
+        if self.action in ['list', 'retrieve']:
+            permission_classes = [IsAuthenticated, IsProjectContributor]
+        
+        elif self.action == 'create':
+            permission_classes = [IsAuthenticated]
+        
+        elif self.action in ['update', 'partial_update', 'destroy']:
+            permission_classes = [IsAuthenticated, IsAuthor]
+        
+        else:
+            permission_classes = [IsAuthenticated]
+        
+        return [permission() for permission in permission_classes]
 
 
 class AdminContributorViewSet(ModelViewSet):

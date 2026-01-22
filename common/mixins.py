@@ -18,20 +18,16 @@ class MultipleSerializerMixin:
         return self.detail_serializer_class
 
 
-class ResourcePermissionMixin:
+class TrackingPermissionMixin:
     '''
     Permission is based on action:
-    - list/retrieve: contributor
-    - create: authenticated
-    - update/partial_update/destroy: author
+    - list/retrieve/create: project contributor
+    - update/partial_update/destroy: object author
     '''
 
     def get_permissions(self):
-        if self.action in ['list', 'retrieve']:
+        if self.action in ['list', 'retrieve', 'create']:
             permission_classes = [IsAuthenticated, IsProjectContributor]
-        
-        elif self.action == 'create':
-            permission_classes = [IsAuthenticated]
         
         elif self.action in ['update', 'partial_update', 'destroy']:
             permission_classes = [IsAuthenticated, IsAuthor]

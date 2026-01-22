@@ -1,10 +1,9 @@
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import IsAuthenticated
 
 from tracking.serializers import (IssueListSerializer, IssueDetailSerializer,
                                   CommentListSerializer, CommentDetailSerializer)
 from tracking.models import Issue, Comment
-from common.mixins import MultipleSerializerMixin, ResourcePermissionMixin
+from common.mixins import MultipleSerializerMixin, TrackingPermissionMixin
 from common.permissions import IsAdminAuthenticated
 
 
@@ -16,7 +15,7 @@ class AdminIssueViewSet(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class IssueViewSet(MultipleSerializerMixin, ResourcePermissionMixin, ModelViewSet):
+class IssueViewSet(MultipleSerializerMixin, TrackingPermissionMixin, ModelViewSet):
 
     serializer_class = IssueListSerializer
     detail_serializer_class = IssueDetailSerializer
@@ -38,7 +37,7 @@ class AdminCommentViewSet(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class CommentViewSet(MultipleSerializerMixin, ResourcePermissionMixin, ModelViewSet):
+class CommentViewSet(MultipleSerializerMixin, TrackingPermissionMixin, ModelViewSet):
 
     serializer_class = CommentListSerializer
     detail_serializer_class = CommentDetailSerializer
