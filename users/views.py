@@ -9,6 +9,7 @@ from django.contrib.auth import update_session_auth_hash, get_user_model
 
 from users.serializers import (RegisterSerializer, MeSerializer,
                                ChangePasswordSerializer, AdminUserSerializer)
+from common.permissions import IsAdminAuthenticated
 
 
 User = get_user_model()
@@ -28,6 +29,7 @@ class MeView(generics.RetrieveUpdateDestroyAPIView):
     '''
 
     serializer_class = MeSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_object(self):
         return self.request.user
@@ -37,10 +39,13 @@ class AdminUserViewSet(ModelViewSet):
 
     serializer_class = AdminUserSerializer
     queryset = User.objects.all()
+    permission_classes = [IsAdminAuthenticated]
 
 
 class ChangePasswordView(APIView):
     '''Update the password of the authenticated user.'''
+
+    permission_classes = [IsAuthenticated]
 
     def post(self, request):
         serializer = ChangePasswordSerializer(data=request.data, context={'request': request})
