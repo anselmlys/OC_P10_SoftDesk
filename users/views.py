@@ -64,4 +64,4 @@ class ChangePasswordView(APIView):
         # Not necessary if using JWT
         update_session_auth_hash(request, user)
 
-        return Response('Le mot de passe a été modifié.', status=status.HTTP_200_OK)
+        return Response('Password has been modified.', status=status.HTTP_200_OK)

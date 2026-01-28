@@ -26,7 +26,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         '''Raise an error if the user is less than 15 years old.'''
         if value is not True:
             raise serializers.ValidationError(
-                'Vous devez avoir au moins 15 ans pour vous inscrire.'
+                {'is_15_or_older': 'You need to be at least 15 years old to register.'}
             )
         return value
     
@@ -88,12 +88,14 @@ class ChangePasswordSerializer(serializers.Serializer):
 
         # Check old password
         if not user.check_password(attrs['old_password']):
-            raise serializers.ValidationError('Ancien mot de passe incorrect.')
+            raise serializers.ValidationError(
+                {'old_password': 'Do not match current password.'}
+            )
         
         # Check that the new password inputs match
         if attrs['new_password'] != attrs['new_password_confirm']:
             raise serializers.ValidationError(
-                'Les nouveaux mot de passes ne sont pas identiques.'
+                {'new_password_confirm': 'The new passwords do not match.'}
             )
         
         # Apply Django password validators (length, complexity...)
