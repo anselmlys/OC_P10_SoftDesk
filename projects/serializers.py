@@ -38,8 +38,8 @@ class ProjectListSerializer(serializers.ModelSerializer):
 
 class AdminProjectDetailSerializer(serializers.ModelSerializer):
     author_username = serializers.CharField(source='author.username', read_only=True)
-    contributors = ContributorListSerializer(many=True)
-    issues = IssueListSerializer(many=True)
+    contributors = ContributorListSerializer(many=True, read_only=True)
+    issues = IssueListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Project
@@ -63,8 +63,8 @@ class AdminProjectDetailSerializer(serializers.ModelSerializer):
 
 class ProjectDetailSerializer(serializers.ModelSerializer):
     author_username = serializers.CharField(source='author.username', read_only=True)
-    contributors = ContributorListSerializer(many=True)
-    issues = IssueListSerializer(many=True)
+    contributors = ContributorListSerializer(many=True, read_only=True)
+    issues = IssueListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Project
