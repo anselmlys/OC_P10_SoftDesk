@@ -21,7 +21,7 @@ class IssueViewSet(MultipleSerializerMixin, TrackingPermissionMixin, ModelViewSe
     detail_serializer_class = IssueDetailSerializer
 
     def perform_create(self, serializer):
-        '''During POST, make the authenticated user the author of the project.'''
+        '''During POST, make the authenticated user the author of the issue.'''
         serializer.save(author=self.request.user)
 
     def get_queryset(self):
@@ -41,6 +41,10 @@ class CommentViewSet(MultipleSerializerMixin, TrackingPermissionMixin, ModelView
 
     serializer_class = CommentListSerializer
     detail_serializer_class = CommentDetailSerializer
+
+    def perform_create(self, serializer):
+        '''During POST, make the authenticated user the author of the comment.'''
+        serializer.save(author=self.request.user)
 
     def get_queryset(self):
         user = self.request.user
