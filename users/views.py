@@ -1,6 +1,6 @@
-from django.shortcuts import render
 from rest_framework import generics
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.mixins import RetrieveModelMixin, DestroyModelMixin
+from rest_framework.viewsets import GenericViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -35,7 +35,8 @@ class MeView(generics.RetrieveUpdateDestroyAPIView):
         return self.request.user
 
 
-class AdminUserViewSet(ModelViewSet):
+class AdminUserViewSet(RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
+    '''Admin can only use method GET and DELETE on user.'''
 
     serializer_class = AdminUserSerializer
     queryset = User.objects.all()
