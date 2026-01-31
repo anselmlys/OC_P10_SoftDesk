@@ -1,5 +1,5 @@
 from rest_framework import generics
-from rest_framework.mixins import RetrieveModelMixin, DestroyModelMixin
+from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, DestroyModelMixin
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -35,7 +35,7 @@ class MeView(generics.RetrieveUpdateDestroyAPIView):
         return self.request.user
 
 
-class AdminUserViewSet(RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
+class AdminUserViewSet(ListModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
     '''Admin can only use method GET and DELETE on user.'''
 
     serializer_class = AdminUserSerializer
