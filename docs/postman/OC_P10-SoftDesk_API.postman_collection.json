@@ -1,0 +1,3477 @@
+{
+  "info": {
+    "_postman_id": "65db97bc-dde1-43ee-9f81-293666b5dc62",
+    "name": "OC P10 - SoftDesk API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45206778",
+    "_collection_link": "https://go.postman.co/collection/45206778-65db97bc-dde1-43ee-9f81-293666b5dc62?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "/api/auth/register/",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "No Auth",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "TestUser",
+                  "type": "text",
+                  "uuid": "b0f7dac2-c1d0-48ac-bb16-e9da4faf23e5"
+                },
+                {
+                  "key": "password",
+                  "value": "{{password}}",
+                  "type": "text",
+                  "uuid": "6d8af515-fd39-4c1e-9375-b37fa0790e6b"
+                },
+                {
+                  "key": "is_15_or_older",
+                  "value": "true",
+                  "type": "text",
+                  "uuid": "04b02234-f5be-4ed7-a4f6-c31f87bebe73"
+                },
+                {
+                  "key": "can_be_contacted",
+                  "value": "true",
+                  "type": "text",
+                  "uuid": "18b9fe11-2a71-47ed-afe1-ab3f0e0065c1"
+                },
+                {
+                  "key": "can_data_be_shared",
+                  "value": "true",
+                  "type": "text",
+                  "uuid": "b4607b96-4dde-4889-b8f8-647659e9ef75"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/auth/register/",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "No Auth",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "JaneDoe",
+                      "type": "text",
+                      "uuid": "b0f7dac2-c1d0-48ac-bb16-e9da4faf23e5"
+                    },
+                    {
+                      "key": "password",
+                      "value": "{{password}}",
+                      "type": "text",
+                      "uuid": "6d8af515-fd39-4c1e-9375-b37fa0790e6b"
+                    },
+                    {
+                      "key": "is_15_or_older",
+                      "value": "true",
+                      "type": "text",
+                      "uuid": "04b02234-f5be-4ed7-a4f6-c31f87bebe73"
+                    },
+                    {
+                      "key": "can_be_contacted",
+                      "value": "false",
+                      "type": "text",
+                      "uuid": "18b9fe11-2a71-47ed-afe1-ab3f0e0065c1"
+                    },
+                    {
+                      "key": "can_data_be_shared",
+                      "value": "false",
+                      "type": "text",
+                      "uuid": "b4607b96-4dde-4889-b8f8-647659e9ef75"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/register/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Thu, 22 Jan 2026 10:19:13 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "96"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"username\": \"JaneDoe\",\n    \"is_15_or_older\": true,\n    \"can_be_contacted\": false,\n    \"can_data_be_shared\": false\n}"
+            },
+            {
+              "name": "/api/auth/register/",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "No Auth",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "JaneDoe",
+                      "type": "text",
+                      "uuid": "b0f7dac2-c1d0-48ac-bb16-e9da4faf23e5"
+                    },
+                    {
+                      "key": "password",
+                      "value": "{{password}}",
+                      "type": "text",
+                      "uuid": "6d8af515-fd39-4c1e-9375-b37fa0790e6b"
+                    },
+                    {
+                      "key": "is_15_or_older",
+                      "value": "false",
+                      "type": "text",
+                      "uuid": "04b02234-f5be-4ed7-a4f6-c31f87bebe73"
+                    },
+                    {
+                      "key": "can_be_contacted",
+                      "value": "true",
+                      "type": "text",
+                      "uuid": "18b9fe11-2a71-47ed-afe1-ab3f0e0065c1"
+                    },
+                    {
+                      "key": "can_data_be_shared",
+                      "value": "true",
+                      "type": "text",
+                      "uuid": "b4607b96-4dde-4889-b8f8-647659e9ef75"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/register/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register",
+                    ""
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Thu, 22 Jan 2026 10:19:54 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "132"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"username\": [\n        \"A user with that username already exists.\"\n    ],\n    \"is_15_or_older\": [\n        \"Vous devez avoir au moins 15 ans pour vous inscrire.\"\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/auth/token/",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse la réponse JSON\r",
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "// Stocke les tokens dans l'environnement\r",
+                  "pm.environment.set(\"access_token\", response.access);\r",
+                  "pm.environment.set(\"refresh_token\", response.refresh);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "No Auth",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "{{username}}",
+                  "type": "text",
+                  "uuid": "b0f7dac2-c1d0-48ac-bb16-e9da4faf23e5"
+                },
+                {
+                  "key": "password",
+                  "value": "{{password}}",
+                  "type": "text",
+                  "uuid": "6d8af515-fd39-4c1e-9375-b37fa0790e6b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/token/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "token",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/auth/token/",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "No Auth",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "username",
+                      "value": "{{username}}",
+                      "type": "text",
+                      "uuid": "b0f7dac2-c1d0-48ac-bb16-e9da4faf23e5"
+                    },
+                    {
+                      "key": "password",
+                      "value": "{{password}}",
+                      "type": "text",
+                      "uuid": "6d8af515-fd39-4c1e-9375-b37fa0790e6b"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/token/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "token",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:43:01 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "489"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2OTk2Nzc4MSwiaWF0IjoxNzY5ODgxMzgxLCJqdGkiOiI0ZmZlZDBmNGZkYjM0NzFhYTY0ZDI0N2I0ZGUwZDM5ZCIsInVzZXJfaWQiOiI1In0.Xv78nP5--_Oy3MURIPEqdR5AvC4ZexCPZUzcOa_nPnI\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY5ODgzMTgxLCJpYXQiOjE3Njk4ODEzODEsImp0aSI6ImQ2ZDU0ZmU4Y2VmZDQ5M2RhOWU2NTE0YzgwMGEyZmE2IiwidXNlcl9pZCI6IjUifQ.TjHG5FlvmVMMnf57caoguavy_fKfDeI10anRmC3kUaQ\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/auth/token/refresh/",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse la réponse JSON\r",
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "// Stocke les tokens dans l'environnement\r",
+                  "pm.environment.set(\"access_token\", response.access);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "No Auth",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "refresh",
+                  "value": "{{refresh_token}}",
+                  "type": "text",
+                  "uuid": "4d40c1b3-c247-49c8-9946-8d5453450d3b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/token/refresh/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "token",
+                "refresh",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/auth/token/refresh/",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "No Auth",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "refresh",
+                      "value": "{{refresh_token}}",
+                      "type": "text",
+                      "uuid": "4d40c1b3-c247-49c8-9946-8d5453450d3b"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/token/refresh/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "token",
+                    "refresh",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:43:12 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "244"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY5ODgzMTkyLCJpYXQiOjE3Njk4ODEzOTIsImp0aSI6IjYxNjIzMjcyMDk3MjQ3ZGNhZGI1YzI3ZWQxY2JhZDdkIiwidXNlcl9pZCI6IjUifQ.5lcrOmK2YmDyG0GYLGtHLMBhmq0Kn_rAROrFeHUNGXA\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "/api/users/me (detail)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/me/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/users/me (detail)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/users/me/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "me",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 21 Jan 2026 16:45:37 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "107"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"username\": \"admin\",\n    \"can_be_contacted\": true,\n    \"can_data_be_shared\": true,\n    \"date_joined\": \"2026-01-16T10:00:57Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/users/me (update)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "can_be_contacted",
+                  "value": "true",
+                  "type": "text",
+                  "uuid": "ef9eda88-edf5-4d10-9648-ab331d49cc71"
+                },
+                {
+                  "key": "can_data_be_shared",
+                  "value": "false",
+                  "type": "text",
+                  "uuid": "bf219301-45fc-4e9e-87be-2c1390f66293"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/me/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/users/me (update)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "can_be_contacted",
+                      "value": "true",
+                      "type": "text",
+                      "uuid": "ef9eda88-edf5-4d10-9648-ab331d49cc71"
+                    },
+                    {
+                      "key": "can_data_be_shared",
+                      "value": "false",
+                      "type": "text",
+                      "uuid": "bf219301-45fc-4e9e-87be-2c1390f66293"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/users/me/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "me",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:43:51 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "117"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"username\": \"JohnDoe\",\n    \"can_be_contacted\": true,\n    \"can_data_be_shared\": false,\n    \"date_joined\": \"2026-01-16T15:22:10.102273Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/users/me (delete)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/me/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/users/me (delete)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/users/me/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "me",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:45:59 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "/api/users/me/change-password/ (create)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "old_password",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "5eb63133-f239-4331-aabc-618bc470a8a8"
+                },
+                {
+                  "key": "new_password",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "61162ac0-a933-4fd3-9300-794dcc600e06"
+                },
+                {
+                  "key": "new_password_confirm",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "3625b609-43ea-4f01-8c45-053812401a90"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/me/change-password/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me",
+                "change-password",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/users/me/change-password/ (create)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "old_password",
+                      "value": "{{password}}",
+                      "type": "text",
+                      "uuid": "5eb63133-f239-4331-aabc-618bc470a8a8"
+                    },
+                    {
+                      "key": "new_password",
+                      "value": "{{password}}",
+                      "type": "text",
+                      "uuid": "61162ac0-a933-4fd3-9300-794dcc600e06"
+                    },
+                    {
+                      "key": "new_password_confirm",
+                      "value": "{{password}}!",
+                      "type": "text",
+                      "uuid": "3625b609-43ea-4f01-8c45-053812401a90"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/users/me/change-password/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "users",
+                    "me",
+                    "change-password",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:28:13 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "29"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "sessionid=dnt0qhtb9gfthpn10jyocohh5ayr0dhq; expires=Sat, 14 Feb 2026 17:28:13 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+                }
+              ],
+              "cookie": [],
+              "body": "\"Password has been modified.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "item": [
+        {
+          "name": "/api/projects/ (list)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/projects/ (list)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/projects/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "projects",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:29:49 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "344"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"name\": \"Création de l'API Softdesk\",\n            \"type\": \"backend\",\n            \"created_time\": \"2026-01-18T16:32:58.976086Z\",\n            \"updated_at\": \"2026-01-18T16:33:06.721954Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Projet Lorem Ipsum\",\n            \"type\": \"android\",\n            \"created_time\": \"2026-01-18T17:32:10.921302Z\",\n            \"updated_at\": \"2026-01-18T17:32:10.921302Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/projects/:project_id/ (detail)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/{{project_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "{{project_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/projects/:project_id/ (detail)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/projects/{{project_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "projects",
+                    "{{project_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:30:04 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "694"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"name\": \"Création de l'API Softdesk\",\n    \"description\": \"Projet 10 de la formation OC.\",\n    \"type\": \"backend\",\n    \"author\": 1,\n    \"author_username\": \"admin\",\n    \"created_time\": \"2026-01-18T16:32:58.976086Z\",\n    \"updated_at\": \"2026-01-18T16:33:06.721954Z\",\n    \"contributors\": [\n        {\n            \"user\": 1,\n            \"user_username\": \"admin\"\n        },\n        {\n            \"user\": 5,\n            \"user_username\": \"JohnDoe\"\n        }\n    ],\n    \"issues\": [\n        {\n            \"id\": 1,\n            \"project\": 1,\n            \"name\": \"Création des endpoints de Issue\",\n            \"tag\": \"feature\",\n            \"priority\": \"high\",\n            \"created_time\": \"2026-01-19T10:26:11.961816Z\",\n            \"updated_at\": \"2026-01-19T10:26:11.961816Z\"\n        },\n        {\n            \"id\": 2,\n            \"project\": 1,\n            \"name\": \"Mettre à jour README.md\",\n            \"tag\": \"task\",\n            \"priority\": \"medium\",\n            \"created_time\": \"2026-01-19T10:27:15.671786Z\",\n            \"updated_at\": \"2026-01-19T10:27:15.671786Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/projects/ (create)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Test Postman",
+                  "type": "text",
+                  "uuid": "ac5888c5-182b-4324-83f4-66158a91393a"
+                },
+                {
+                  "key": "description",
+                  "value": "Ceci est un test Postman",
+                  "type": "text",
+                  "uuid": "dcbb10c0-897b-4ea6-a2c4-c0fad6e30289"
+                },
+                {
+                  "key": "type",
+                  "value": "ios",
+                  "type": "text",
+                  "uuid": "7213c398-6e6d-4655-a1ca-8b62325b76cb"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/projects/ (create)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Test Postman",
+                      "type": "text",
+                      "uuid": "ac5888c5-182b-4324-83f4-66158a91393a"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Ceci est un test Postman",
+                      "type": "text",
+                      "uuid": "dcbb10c0-897b-4ea6-a2c4-c0fad6e30289"
+                    },
+                    {
+                      "key": "type",
+                      "value": "ios",
+                      "type": "text",
+                      "uuid": "7213c398-6e6d-4655-a1ca-8b62325b76cb"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/projects/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "projects",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:31:37 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "277"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 5,\n    \"name\": \"Test Postman\",\n    \"description\": \"Ceci est un test Postman\",\n    \"type\": \"ios\",\n    \"author\": 5,\n    \"author_username\": \"JohnDoe\",\n    \"created_time\": \"2026-01-31T17:31:37.725575Z\",\n    \"updated_at\": \"2026-01-31T17:31:37.725575Z\",\n    \"contributors\": [\n        {\n            \"user\": 5,\n            \"user_username\": \"JohnDoe\"\n        }\n    ],\n    \"issues\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/projects/:project_id/ (update)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Titre projet modifié",
+                  "type": "text",
+                  "uuid": "ec1cd4d6-2431-4f03-8d8f-779c3f52f4de"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "9e747fc1-9164-4a9a-a4d4-233870176c75"
+                },
+                {
+                  "key": "type",
+                  "value": "android",
+                  "type": "text",
+                  "uuid": "abf2845d-aa93-4a37-8bc4-248c12d8e643"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/{{project_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "{{project_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/projects/:project_id/ (update)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Titre projet modifié",
+                      "type": "text",
+                      "uuid": "ec1cd4d6-2431-4f03-8d8f-779c3f52f4de"
+                    },
+                    {
+                      "key": "description",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "9e747fc1-9164-4a9a-a4d4-233870176c75"
+                    },
+                    {
+                      "key": "type",
+                      "value": "android",
+                      "type": "text",
+                      "uuid": "abf2845d-aa93-4a37-8bc4-248c12d8e643"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/projects/{{project_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "projects",
+                    "{{project_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:48:28 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "266"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 6,\n    \"name\": \"Titre projet modifié\",\n    \"description\": \"\",\n    \"type\": \"android\",\n    \"author\": 5,\n    \"author_username\": \"JohnDoe\",\n    \"created_time\": \"2026-01-31T17:47:58.226873Z\",\n    \"updated_at\": \"2026-01-31T17:48:28.910421Z\",\n    \"contributors\": [\n        {\n            \"user\": 5,\n            \"user_username\": \"JohnDoe\"\n        }\n    ],\n    \"issues\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/projects/:project_id/ (delete)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{base_url}}/api/projects/{{project_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "projects",
+                "{{project_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/projects/:project_id/ (delete)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/projects/{{project_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "projects",
+                    "{{project_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:48:43 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Contributors",
+      "item": [
+        {
+          "name": "api/contributors/ (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/contributors/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "contributors",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "api/contributors/ (list)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/contributors/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "contributors",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:35:25 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "343"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"user\": 1,\n            \"user_username\": \"admin\",\n            \"project\": 1,\n            \"project_name\": \"Création de l'API Softdesk\"\n        },\n        {\n            \"id\": 4,\n            \"user\": 5,\n            \"user_username\": \"JohnDoe\",\n            \"project\": 1,\n            \"project_name\": \"Création de l'API Softdesk\"\n        },\n        {\n            \"id\": 3,\n            \"user\": 5,\n            \"user_username\": \"JohnDoe\",\n            \"project\": 3,\n            \"project_name\": \"Projet Lorem Ipsum\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "api/contributors/ (create)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "user",
+                  "value": "6",
+                  "type": "text",
+                  "uuid": "38d32e53-a5ca-4c75-b584-6fb8e009b984"
+                },
+                {
+                  "key": "project",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "e144d04a-d9ad-434a-8e42-6e1f61448782"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contributors/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "contributors",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "api/contributors/ (create)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "user",
+                      "value": "6",
+                      "type": "text",
+                      "uuid": "38d32e53-a5ca-4c75-b584-6fb8e009b984"
+                    },
+                    {
+                      "key": "project",
+                      "value": "3",
+                      "type": "text",
+                      "uuid": "e144d04a-d9ad-434a-8e42-6e1f61448782"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/contributors/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "contributors",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:50:34 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "91"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 9,\n    \"user\": 6,\n    \"user_username\": \"JaneDoe\",\n    \"project\": 3,\n    \"project_name\": \"Projet Lorem Ipsum\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "api/contributors/:contributor_id/ (delete)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/contributors/{{contributor_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "contributors",
+                "{{contributor_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "api/contributors/:contributor_id/ (delete)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/contributors/{{contributor_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "contributors",
+                    "{{contributor_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:51:26 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Issues",
+      "item": [
+        {
+          "name": "/api/issues/ (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/issues/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "issues",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/issues/ (list)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/issues/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "issues",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:38:10 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "577"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"project\": 1,\n            \"name\": \"Création des endpoints de Issue\",\n            \"tag\": \"feature\",\n            \"priority\": \"high\",\n            \"created_time\": \"2026-01-19T10:26:11.961816Z\",\n            \"updated_at\": \"2026-01-19T10:26:11.961816Z\"\n        },\n        {\n            \"id\": 2,\n            \"project\": 1,\n            \"name\": \"Mettre à jour README.md\",\n            \"tag\": \"task\",\n            \"priority\": \"medium\",\n            \"created_time\": \"2026-01-19T10:27:15.671786Z\",\n            \"updated_at\": \"2026-01-19T10:27:15.671786Z\"\n        },\n        {\n            \"id\": 4,\n            \"project\": 3,\n            \"name\": \"Issue Lorem Ipsum\",\n            \"tag\": \"bug\",\n            \"priority\": \"low\",\n            \"created_time\": \"2026-01-19T13:37:25.961925Z\",\n            \"updated_at\": \"2026-01-19T13:37:25.961925Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/issues/:issue_id/ (detail)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/issues/{{issue_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "issues",
+                "{{issue_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/issues/:issue_id/ (detail)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/issues/{{issue_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "issues",
+                    "{{issue_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:39:17 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "753"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"name\": \"Création des endpoints de Issue\",\n    \"description\": \"Mise en place des vues list et detail\",\n    \"project\": 1,\n    \"project_name\": \"Création de l'API Softdesk\",\n    \"status\": \"inprogress\",\n    \"priority\": \"high\",\n    \"tag\": \"feature\",\n    \"author\": 1,\n    \"author_username\": \"admin\",\n    \"assigned_to\": 1,\n    \"assigned_to_username\": \"admin\",\n    \"created_time\": \"2026-01-19T10:26:11.961816Z\",\n    \"updated_at\": \"2026-01-19T10:26:11.961816Z\",\n    \"comments\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"eadf5733-8132-4c8a-8e2f-667cb81e1908\",\n            \"created_time\": \"2026-01-19T11:09:27.754334Z\",\n            \"description\": \"La partie detail est en cours.\",\n            \"author_username\": \"admin\",\n            \"issue\": 1\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"7e2f1b42-c9fb-427e-9d8f-963d4ababa9f\",\n            \"created_time\": \"2026-01-19T11:09:41.793745Z\",\n            \"description\": \"C'est noté !\",\n            \"author_username\": \"JohnDoe\",\n            \"issue\": 1\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/issues/ (create)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Test Postman",
+                  "type": "text",
+                  "uuid": "110df5d0-e2de-4039-b8b0-e6d059186e32"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "8fa8db15-42ff-4f74-8f10-4111a8960f67"
+                },
+                {
+                  "key": "project",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "dfdceebd-e144-46dc-8c40-0e24c6e6def7"
+                },
+                {
+                  "key": "status",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "b36c3e92-3a65-4e37-b35f-3d9bacc7f9ce"
+                },
+                {
+                  "key": "priority",
+                  "value": "low",
+                  "type": "text",
+                  "uuid": "83908d0c-6e7e-441a-92bd-aebaffd684c2"
+                },
+                {
+                  "key": "tag",
+                  "value": "feature",
+                  "type": "text",
+                  "uuid": "c11ebb5c-7c74-40f3-a996-0c2f3b093d37"
+                },
+                {
+                  "key": "assigned_to",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "513a6084-57dc-4fcb-8c68-92eb4f2af56f"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/issues/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "issues",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/issues/ (create)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Test Postman",
+                      "type": "text",
+                      "uuid": "110df5d0-e2de-4039-b8b0-e6d059186e32"
+                    },
+                    {
+                      "key": "description",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "8fa8db15-42ff-4f74-8f10-4111a8960f67"
+                    },
+                    {
+                      "key": "project",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "dfdceebd-e144-46dc-8c40-0e24c6e6def7"
+                    },
+                    {
+                      "key": "status",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "b36c3e92-3a65-4e37-b35f-3d9bacc7f9ce"
+                    },
+                    {
+                      "key": "priority",
+                      "value": "low",
+                      "type": "text",
+                      "uuid": "83908d0c-6e7e-441a-92bd-aebaffd684c2"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "feature",
+                      "type": "text",
+                      "uuid": "c11ebb5c-7c74-40f3-a996-0c2f3b093d37"
+                    },
+                    {
+                      "key": "assigned_to",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "513a6084-57dc-4fcb-8c68-92eb4f2af56f"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/issues/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "issues",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:55:12 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "341"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 5,\n    \"name\": \"Test Postman\",\n    \"description\": \"\",\n    \"project\": 1,\n    \"project_name\": \"Création de l'API Softdesk\",\n    \"status\": \"todo\",\n    \"priority\": \"low\",\n    \"tag\": \"feature\",\n    \"author\": 5,\n    \"author_username\": \"JohnDoe\",\n    \"assigned_to\": 1,\n    \"assigned_to_username\": \"admin\",\n    \"created_time\": \"2026-01-31T17:55:12.485150Z\",\n    \"updated_at\": \"2026-01-31T17:55:12.485150Z\",\n    \"comments\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/issues/:issue_id/ (update)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Test Postman modifié",
+                  "type": "text",
+                  "uuid": "110df5d0-e2de-4039-b8b0-e6d059186e32"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "8fa8db15-42ff-4f74-8f10-4111a8960f67"
+                },
+                {
+                  "key": "project",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "dfdceebd-e144-46dc-8c40-0e24c6e6def7"
+                },
+                {
+                  "key": "status",
+                  "value": "inprogress",
+                  "type": "text",
+                  "uuid": "b36c3e92-3a65-4e37-b35f-3d9bacc7f9ce"
+                },
+                {
+                  "key": "priority",
+                  "value": "medium",
+                  "type": "text",
+                  "uuid": "83908d0c-6e7e-441a-92bd-aebaffd684c2"
+                },
+                {
+                  "key": "tag",
+                  "value": "task",
+                  "type": "text",
+                  "uuid": "c11ebb5c-7c74-40f3-a996-0c2f3b093d37"
+                },
+                {
+                  "key": "assigned_to",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "513a6084-57dc-4fcb-8c68-92eb4f2af56f"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/issues/{{issue_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "issues",
+                "{{issue_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/issues/:issue_id/ (update)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Test Postman modifié",
+                      "type": "text",
+                      "uuid": "110df5d0-e2de-4039-b8b0-e6d059186e32"
+                    },
+                    {
+                      "key": "description",
+                      "value": "",
+                      "type": "text",
+                      "uuid": "8fa8db15-42ff-4f74-8f10-4111a8960f67"
+                    },
+                    {
+                      "key": "project",
+                      "value": "3",
+                      "type": "text",
+                      "uuid": "dfdceebd-e144-46dc-8c40-0e24c6e6def7"
+                    },
+                    {
+                      "key": "status",
+                      "value": "inprogress",
+                      "type": "text",
+                      "uuid": "b36c3e92-3a65-4e37-b35f-3d9bacc7f9ce"
+                    },
+                    {
+                      "key": "priority",
+                      "value": "medium",
+                      "type": "text",
+                      "uuid": "83908d0c-6e7e-441a-92bd-aebaffd684c2"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "task",
+                      "type": "text",
+                      "uuid": "c11ebb5c-7c74-40f3-a996-0c2f3b093d37"
+                    },
+                    {
+                      "key": "assigned_to",
+                      "value": "5",
+                      "type": "text",
+                      "uuid": "513a6084-57dc-4fcb-8c68-92eb4f2af56f"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/issues/{{issue_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "issues",
+                    "{{issue_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:57:12 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "349"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 5,\n    \"name\": \"Test Postman modifié\",\n    \"description\": \"\",\n    \"project\": 3,\n    \"project_name\": \"Projet Lorem Ipsum\",\n    \"status\": \"inprogress\",\n    \"priority\": \"medium\",\n    \"tag\": \"task\",\n    \"author\": 5,\n    \"author_username\": \"JohnDoe\",\n    \"assigned_to\": 5,\n    \"assigned_to_username\": \"JohnDoe\",\n    \"created_time\": \"2026-01-31T17:55:12.485150Z\",\n    \"updated_at\": \"2026-01-31T17:57:12.371596Z\",\n    \"comments\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/issues/:issue_id/ (delete)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/issues/{{issue_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "issues",
+                "{{issue_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/issues/:issue_id/ (delete)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/issues/{{issue_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "issues",
+                    "{{issue_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:57:34 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "item": [
+        {
+          "name": "/api/comments/ (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/comments/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/comments/ (list)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/comments/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "comments",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:39:56 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "568"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"eadf5733-8132-4c8a-8e2f-667cb81e1908\",\n            \"created_time\": \"2026-01-19T11:09:27.754334Z\",\n            \"description\": \"La partie detail est en cours.\",\n            \"author_username\": \"admin\",\n            \"issue\": 1\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"7e2f1b42-c9fb-427e-9d8f-963d4ababa9f\",\n            \"created_time\": \"2026-01-19T11:09:41.793745Z\",\n            \"description\": \"C'est noté !\",\n            \"author_username\": \"JohnDoe\",\n            \"issue\": 1\n        },\n        {\n            \"id\": 3,\n            \"uuid\": \"b2dd1037-4115-4b93-9a0f-30a3ef88590d\",\n            \"created_time\": \"2026-01-20T14:40:11.897260Z\",\n            \"description\": \"Lorem Ipsum\",\n            \"author_username\": \"JohnDoe\",\n            \"issue\": 4\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/comments/:comment_id/ (detail)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/comments/{{comment_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                "{{comment_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/comments/:comment_id/ (detail)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/comments/{{comment_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "comments",
+                    "{{comment_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 17:40:14 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "284"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"uuid\": \"eadf5733-8132-4c8a-8e2f-667cb81e1908\",\n    \"description\": \"La partie detail est en cours.\",\n    \"issue\": 1,\n    \"issue_name\": \"Création des endpoints de Issue\",\n    \"author\": 1,\n    \"author_username\": \"admin\",\n    \"created_time\": \"2026-01-19T11:09:27.754334Z\",\n    \"updated_at\": \"2026-01-19T11:09:27.754334Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/comments/ (create)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "description",
+                  "value": "Test Postman",
+                  "type": "text",
+                  "uuid": "d79bfcaf-72a5-487c-a50a-816fe0588c43"
+                },
+                {
+                  "key": "issue",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "f0a9a534-1e18-45b1-9588-20b5fd73c73d"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/comments/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/comments/ (create)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "description",
+                      "value": "Test Postman",
+                      "type": "text",
+                      "uuid": "d79bfcaf-72a5-487c-a50a-816fe0588c43"
+                    },
+                    {
+                      "key": "issue",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "f0a9a534-1e18-45b1-9588-20b5fd73c73d"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/comments/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "comments",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 18:04:03 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "268"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"uuid\": \"34c329c7-b19a-4e20-b6e6-52b4f6ec4a5e\",\n    \"description\": \"Test Postman\",\n    \"issue\": 1,\n    \"issue_name\": \"Création des endpoints de Issue\",\n    \"author\": 5,\n    \"author_username\": \"JohnDoe\",\n    \"created_time\": \"2026-01-31T18:04:03.502374Z\",\n    \"updated_at\": \"2026-01-31T18:04:03.502374Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/comments/:comment_id/ (update)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "description",
+                  "value": "Test Postman modifié",
+                  "type": "text",
+                  "uuid": "d79bfcaf-72a5-487c-a50a-816fe0588c43"
+                },
+                {
+                  "key": "issue",
+                  "value": "2",
+                  "type": "text",
+                  "uuid": "f0a9a534-1e18-45b1-9588-20b5fd73c73d"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/comments/{{comment_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                "{{comment_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/comments/:comment_id/ (update)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "description",
+                      "value": "Test Postman modifié",
+                      "type": "text",
+                      "uuid": "d79bfcaf-72a5-487c-a50a-816fe0588c43"
+                    },
+                    {
+                      "key": "issue",
+                      "value": "2",
+                      "type": "text",
+                      "uuid": "f0a9a534-1e18-45b1-9588-20b5fd73c73d"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/comments/{{comment_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "comments",
+                    "{{comment_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 18:06:12 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "269"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"uuid\": \"34c329c7-b19a-4e20-b6e6-52b4f6ec4a5e\",\n    \"description\": \"Test Postman modifié\",\n    \"issue\": 2,\n    \"issue_name\": \"Mettre à jour README.md\",\n    \"author\": 5,\n    \"author_username\": \"JohnDoe\",\n    \"created_time\": \"2026-01-31T18:04:03.502374Z\",\n    \"updated_at\": \"2026-01-31T18:06:12.715207Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/comments/:comment_id/ (delete)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/comments/{{comment_id}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                "{{comment_id}}",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/comments/:comment_id/ (delete)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/comments/{{comment_id}}/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "comments",
+                    "{{comment_id}}",
+                    ""
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 18:06:32 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "/api/admin/users (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/admin/users/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "/api/admin/users (list)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{access_token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/users/",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "users",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sat, 31 Jan 2026 18:08:03 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "WSGIServer/0.2 CPython/3.10.11"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept, Cookie"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, POST, HEAD, OPTIONS"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "417"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"username\": \"admin\",\n            \"can_be_contacted\": true,\n            \"can_data_be_shared\": true,\n            \"date_joined\": \"2026-01-16T10:00:57Z\"\n        },\n        {\n            \"id\": 5,\n            \"username\": \"JohnDoe\",\n            \"can_be_contacted\": true,\n            \"can_data_be_shared\": false,\n            \"date_joined\": \"2026-01-16T15:22:10.102273Z\"\n        },\n        {\n            \"id\": 6,\n            \"username\": \"JaneDoe\",\n            \"can_be_contacted\": false,\n            \"can_data_be_shared\": false,\n            \"date_joined\": \"2026-01-22T10:19:12.951938Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "/api/admin/contributors (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/admin/contributors/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "contributors",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/admin/projects (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/admin/projects/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "projects",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/admin/issues (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/admin/issues/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "issues",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/admin/comments (list)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/admin/comments/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "comments",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
